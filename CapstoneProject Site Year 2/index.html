@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Speak Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <style>
+	body {
+      font-family: 'Inter', sans-serif;
+	}
+.responsive-nav {
+	display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+		/* In progress with fixed nav (nah u wish m8) */
+@media screen and (max-width: 580px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0; 
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+	top: 9%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .hamburger {
+    display: block;
+	font-size: 1.4em
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+});
+</script>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <header style="font-size: 18px" class="py-2 md:py-5 border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="landing.html" class="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                 <img src="images/GSLogoOnly.png" alt="global speak logo" width="100px" height="100px">
+                <span style="font-size: 30px">GlobalSpeak</span>
+            </a>
+            <nav class="responsive-nav  py-4">
+    			<div class="nav-links bg-gray-100 dark:bg-gray-900">
+					<ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">Home</a></li>
+                    <li><a href="services.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">Services</a></li>
+                    <li><a href="aboutUs.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">About Us</a></li>
+                    <li><a href="contactUs.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">Contact</a></li>
+					<li><a href="reviews.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">Reviews</a></li>
+					<li><a href="faq.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">FAQ</a></li>
+					<li><a href="blogNews.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">News</a></li>
+                </ul>
+				</div>
+				
+				<button class="hamburger text-blue-500" type="button" onClick="function()">
+					☰
+				</button>
+			</nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="bg-gradient-to-br from-[#EBFCE9] via-[#E9FCF1] to-[#E9FCFA] dark:from-[#121C1F] dark:via-[#12161F] dark:to-[#15121F] py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+                    Welcome to Global Speak
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto">
+                    Breaking Language Barriers, Connecting the World
+                </p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300 text-lg">
+                    Get Started
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white text-center mb-8 md:mb-12">
+                    Our Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-8 h-8 text-blue-500 mb-4"><path d="M13 9v-4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"></path><path d="M15 17v-4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4"></path><path d="M3 9h18v10c0 1.66-1.34 3-3 3H6a3 3 0 0 1-3-3V9z"></path><path d="M9 17v-4"></path><path d="M15 17v-4"></path></svg>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Service 1</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Short description</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-8 h-8 text-green-500 mb-4"><rect width="8" height="8" x="3" y="3" rx="1"></rect><rect width="8" height="8" x="13" y="3" rx="1"></rect><rect width="8" height="8" x="3" y="13" rx="1"></rect><rect width="8" height="8" x="13" y="13" rx="1"></rect></svg>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Service 2</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Short description.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase w-8 h-8 text-purple-500 mb-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V13"></path><path d="M8 21V13"></path><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Service 3</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Short description</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-950">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <img src="images/GSFullLogoWText2.png" alt="About Us" class="rounded-[50px] shadow-lg w-3/5">
+                </div>
+                <div class="md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">About Us</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        We are a passionate team dedicated to providing accurate translation for businesses and tourists. With years of experience in the industry, we understand the challenges our clients face, and we're here to help them succeed.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                         We are a company that is looking to do away with the language barriers that conflict with students' education, tourism, and business deals. We believe in building long-lasting relationships with our clients and
+                        delivering exceptional results.
+                    </p>
+                    <a href="aboutUs.html" class="text-blue-500 hover:bg-blue-50 hover:text-blue-600 dark:text-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-300 border-blue-500/30 border px-6 py-2 rounded-full transition-colors duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white text-center mb-8 md:mb-12">
+                    What Our Clients Say
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="images/gaben.png" alt="John Smith" class="rounded-full w-16 h-16">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Gabriel Businger</h4>
+                                <p class="text-gray-500 dark:text-gray-400">Honorary Member</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 italic">
+                            &ldquo;tba &rdquo;
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="images/nxxLogo.jpg" alt="Jane Doe" class="rounded-full w-16 h-16">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Jane Doe</h4>
+                                <p class="text-gray-500 dark:text-gray-400">XYZ Inc</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 italic">
+                            &ldquo;The team is professional, responsive, and delivers exceptional results. A pleasure to work with.&rdquo;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-6 md:py-8 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-4 items-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    &copy;2026 GlobalSpeak. All rights reserved.
+                </p>
+                <div class="flex justify-end gap-4">
+                    <a href="#" aria-label="Facebook" class="text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="text-gray-500 hover:text-blue-400 dark:text-gray-400 dark:hover:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter w-6 h-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" aria-label="GitHub" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.3-.87 2.23a4 4 0 0 1-1.13 1.27V22"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-500 hover:text-pink-500 dark:text-gray-400 dark:hover:text-pink-400">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube w-6 h-6"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path><path d="M10 15V9l5 3-5 3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Website" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-6 h-6"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10 15.3 15.3 0 0 0 4-10 15.3 15.3 0 0 0-4-10z"></path><path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // You can add JavaScript functionality here, such as form validation,
+        // interactive elements, or dynamic content updates.  For example:
+
+        // Get the contact form
+        const contactForm = document.querySelector('form');
+
+        // If the contact form exists...
+        if (contactForm) {
+            // Add a submit event listener to the form
+            contactForm.addEventListener('submit', (event) => {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Get the name, email, and message input values
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Simple validation: Check if the fields are not empty
+                if (name === '' || email === '' || message === '') {
+                    alert('Please fill in all fields.'); // Use a better UI alert, like a modal
+                    return; // Stop the form submission
+                }
+
+                // Email validation (simple check for @ and .)
+                if (!email.includes('@') || !email.includes('.')) {
+                    alert('Please enter a valid email address.'); // Use a better UI alert
+                    return; // Stop the form submission
+                }
+
+                // Here, you would typically send the form data to a server
+                // using an AJAX request (e.g., fetch or XMLHttpRequest).
+                // For this example, we'll just simulate a successful submission.
+                console.log('Form submitted:', { name, email, message });
+                alert('Message sent successfully!'); // Use a better UI confirmation
+
+                // Clear the form fields after successful submission
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+	<!-- Code Explaination -->
+	<!--
+HTML Structure:
+The code provides a basic HTML structure for a business website, including sections for the header, hero section, services, about us, testimonials, contact, and footer.
+The container class from Tailwind CSS is used to ensure proper spacing and alignment of content within each section.
+CSS Styling:
+Tailwind CSS is used for styling.
+The code uses modern and responsive design principles.
+JavaScript:
+The <script> tag includes simple form validation for the contact form. It checks for empty fields and a valid email format. A basic submission simulation is included.
+The JavaScript is placed at the end of the <body> tag.
+Sections:
+Header Section: Contains the logo and navigation links.
+Hero Section: Features a prominent welcome message, a brief description, and a call-to-action button.
+Services Section: Highlights the key services offered by the business with icons and descriptions.
+About Us Section: Provides information about the company's background and mission.
+Testimonials Section: Displays client testimonials to build trust and credibility.
+Contact Us Section: Includes contact information and a form for visitors to send messages.
+Footer Section: Contains copyright information and social media links.
+-->
+	
+</html>
