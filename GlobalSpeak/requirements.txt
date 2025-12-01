@@ -1,0 +1,4 @@
+eel>=0.16.0
+requests>=2.31.0
+# Optional: enable cloud model
+openai>=0.28.0

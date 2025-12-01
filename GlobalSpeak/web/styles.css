@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+:root { --radius: 12px; }
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+/* Window shell to simulate rounded corners on a frameless window */
+.window-shell { max-width: 1200px; margin: 8px auto; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(2,6,23,.12); border:1px solid #e2e8f0; }
+.window-content { background:#f8fafc; }
+
+/* Custom titlebar (draggable area) */
+.titlebar { height: 40px; background:#0f172a; color:#e2e8f0; display:flex; align-items:center; justify-content:space-between; padding:0 .5rem; }
+.titlebar .title-drag { flex:1; user-select:none; -webkit-app-region: drag; display:flex; align-items:center; gap:.5rem; font-weight:600; }
+.titlebar .controls { display:flex; gap:.25rem; -webkit-app-region: no-drag; }
+.titlebar .ctrl { width:36px; height:28px; display:grid; place-items:center; border-radius:8px; color:#cbd5e1; }
+.titlebar .ctrl:hover { background: rgba(148,163,184,.15); color:#fff; }
+.titlebar .ctrl.close:hover { background: #ef4444; color:#fff; }
+
+.nav-link { display:flex; align-items:center; gap:.6rem; padding:.6rem .75rem; border-radius: .6rem; color: #334155; }
+.nav-link:hover { background: #f1f5f9; }
+.nav-link.active { background:#eef2ff; color:#4338ca; }
+.nav-link i { width:18px; height:18px; }
+
+.card { background:#fff; border:1px solid #e2e8f0; border-radius: var(--radius); padding:1rem; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+.card-top { display:flex; align-items:center; gap:.5rem; color:#0f172a; }
+.card-title { font-weight:600; }
+
+.btn { display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .9rem; background:#2563eb; color:#fff; border-radius:.7rem; border:1px solid #1d4ed8; box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+.btn:hover { background:#1d4ed8; }
+.btn.ghost { background:#ffffff; color:#0f172a; border-color:#e2e8f0; }
+.btn:disabled { opacity:.6; cursor:not-allowed; }
+
+.input { width:100%; border:1px solid #e2e8f0; background:#fff; padding:.6rem .8rem; border-radius:.7rem; outline: none; }
+.input:focus { border-color:#93c5fd; box-shadow: 0 0 0 3px rgba(147,197,253,.35); }
+.label { display:block; font-size:.85rem; color:#475569; margin-bottom:.35rem; }
+
+.modal { border:0; border-radius: 16px; padding:0; }
+.modal::backdrop { background: rgba(2,6,23,.45); }
+.modal .modal-box { padding:1rem; width:min(92vw, 560px); border-radius: 16px; border:1px solid #e2e8f0; }
