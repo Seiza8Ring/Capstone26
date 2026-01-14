@@ -8,10 +8,11 @@ The Folders Listed are about the following:
     - Folder: *images* Obviously contains the images for the website.
 
 The Files/Webpages that are yet to be completed are:
-- *blogNews.html*
+- index.html
+    - This has 1 item that needs finishing.
 
 ----
 - *GlobalSpeak*
-    - This is the App itself With everything else.
+    - This is the App itself, with everything else.
     - This folder is unrelated to the website.
     - This is only here because we were required to have all technologies posted to GitHub.
