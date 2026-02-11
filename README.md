@@ -7,9 +7,7 @@ The Folders Listed are about the following:
     - Folder: *GlobalSpeak_App* Is the "web app" that's related to an app demo on the website.
     - Folder: *images* Obviously contains the images for the website.
 
-The Files/Webpages that are yet to be completed are:
-- index.html
-    - This has 1 item that needs finishing.
+There are currently no Files/Webpages that are yet to be completed.
 
 ----
 - *GlobalSpeak*
